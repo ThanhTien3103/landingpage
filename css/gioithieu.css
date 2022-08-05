@@ -1,0 +1,31 @@
+.infosanpham{
+    float: left;
+    max-width: 400px;
+    margin-left: 120px;
+    margin-top: 120px;
+}
+.img{
+    margin-top: 50px;
+    float: right;
+    margin-right: 80px;
+}
+.infosanpham1{
+    margin-right: 300px;
+    margin-top: 120px;
+    float: right;
+    max-width: 400px;
+}
+img{
+    width: 320px;
+    height: 450px;
+}
+.img2{
+    margin-top: 50px;
+    float: left;
+    margin-left: 80px;
+}
+.logo img{
+    margin-top: -10px;
+    width: 80px;
+    height: 80px;
+}
