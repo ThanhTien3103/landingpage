@@ -12,7 +12,7 @@
             $mFrom = 'testuser12921@gmail.com';  //dia chi email cua ban 
             $mPass = '@test123';       //mat khau email cua ban
             $mTo = $email_i;   //dia chi nhan mail
-            $nTo = "KhachHang";
+            $nTo = "KhachHang ".$email_i;
             $mail = new PHPMailer();
             $body             = 'Có Phải Bạn đang cần đặt dịch vụ của chúng tôi';   // Noi dung email
             $title = 'Dịch Vụ ThanhDuongShop';   //Tieu de gui mail
@@ -21,7 +21,7 @@
             $mail->SMTPDebug  = 0;   // enables SMTP debug information (for testing)
             $mail->SMTPAuth   = true;    // enable SMTP authentication
             $mail->SMTPSecure = "ssl";   // sets the prefix to the servier
-            $mail->Host       = "localhost";    // sever gui mail.
+            $mail->Host       = "smtp.gmail.com";    // sever gui mail.
             $mail->Port       = 465;         // cong gui mail
             // xong phan cau hinh bat dau phan gui mail
             $mail->Username   = $mFrom;  // khai bao dia chi email
