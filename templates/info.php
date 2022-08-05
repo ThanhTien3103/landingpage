@@ -6,7 +6,7 @@
         <li> <p>Một trong Ba người sáng lập ThanhDuongShop </p></li>
     </ul>
 </div>
-<div class= "img"><img src="img/img5.jpg" style = "heigth:50px"></div>
+<div class= "img1"><img src="img/img5.jpg" style = "heigth:50px"></div>
 <div class="clear"></div>
 <div class= "img1"><img src="img/img6.jpeg"></div>
 <div class="infodoingu">
