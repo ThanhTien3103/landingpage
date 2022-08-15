@@ -8,18 +8,35 @@
             echo "Invalid email format";
         }
         else{
-            $to = $email_i;
+            $email = $email_i;
+
             $subject = "Dịch Vụ ThanhDuongShop";
-            $messeger = "Có Phải Bạn đang cần đặt dịch vụ của chúng tôi";
-            $header = "From:testuser12921@gmail.com \r\n";
-            $success = mail($to,$subject,$messeger,$header);
-            if($success == false) {
-                echo 'Có lỗi xảy ra!';
-                 
-            } else {
-                 
-                echo 'mail của bạn đã được gửi đi hãy kiếm tra hộp thư đến để xem kết quả. ';
+            $message = "Có Phải Bạn đang cần đặt dịch vụ của chúng tôi";
+            $mail = new PHPMailer();
+            $mail->isSMTP();
+            $mail->Host = 'smtp.gmail.com';
+            $mail->SMTPAuth = true;
+            $mail->Port = 25; 
+            $mail->SMTPDebug = 2;
+            $mail->SMTPSecure = 'tls';
+            $mail->Port = 587;
+            $mail->Username = 'testuser12921@gmail.com';
+            $mail->Password = '@test123';
+            $mail->setFrom('testuser12921@gmail.com', 'ThanhDuongShop');
+            $mail->AddAddress($email,"お客様");
+            $mail->WordWrap = 50;
+            $mail->isHTML();
+            $mail->subject = $subject ;
+            $mail->Body = $message;
+            $mail->AltBody = $message;
+            if(!$mail->Send())
+            {
+                echo "Message could not be sent. <p>";
+                echo "Mailer Error: " . $mail->ErrorInfo;
+                exit;
             }
+
+            echo "Message has been sent";
         }
 
     }else{
